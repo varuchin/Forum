@@ -16,9 +16,9 @@ public class UserCredentialsValidator {
     private static Matcher matcher;
 
     public static void validateNewUser(Registration registration) throws Exception {
-//        validateEmail(registration.getLogin());
-//        validatePassword(registration.getPassword());
-//        validatePasswordVerification(registration.getPassword(), registration.getVerifyPassword());
+        validateEmail(registration.getLogin());
+        validatePassword(registration.getPassword());
+        validatePasswordVerification(registration.getPassword(), registration.getVerifyPassword());
     }
 
     private static void validateEmail(String email) throws EmailValidationException {

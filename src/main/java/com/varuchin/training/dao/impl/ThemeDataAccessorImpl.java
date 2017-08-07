@@ -9,7 +9,6 @@ import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -50,7 +49,7 @@ public class ThemeDataAccessorImpl implements ThemeDataAccessor {
 
     @Override
     public List<String> getMessages(Integer page, Integer pageSize, long themeId) {
-        List<String> messages = new ArrayList<>();
+        List<String> messages;
         try (Session session = sessionProvider.openSession()) {
             Query query = session.createQuery("from ThemeMessage WHERE themeId = :themeId");
 

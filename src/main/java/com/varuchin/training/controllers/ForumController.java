@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
 //security credentials must be provided in every http query from front-end
-//and then validated using com.varuchin.training.utils.UserCredentialsValidator
+//and then validated using com.varuchin.training.security.SecurityManager
 @Controller
 public class ForumController {
 

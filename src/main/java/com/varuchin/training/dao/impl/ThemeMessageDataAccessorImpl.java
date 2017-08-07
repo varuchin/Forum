@@ -45,8 +45,8 @@ public class ThemeMessageDataAccessorImpl implements ThemeMessageDataAccessor {
             if (page != null && pageSize != null) {
                 query.setFirstResult(page);
                 query.setMaxResults(pageSize);
-                messages = query.list();
             }
+            messages = query.list();
         }
 
         return messages;
