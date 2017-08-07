@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add theme</title>
+</head>
+<body>
+<h1>Add new theme</h1>
+<form th:action="@{/addTheme}" th:object="${theme}" method="post">
+    <div><label for="name">Theme:</label></div>
+    <input id="name" type="text" name="name" th:field="*{name}" />
+    <input type="submit" value="Add"/>
+</form>
+</body>
+</html>

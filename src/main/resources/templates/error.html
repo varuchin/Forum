@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Error</title>
+</head>
+<body>
+<h1>Input is incorrect: </h1>
+<form th:action="@{/registration}" th:object="${error}" method="get">
+    <p1 th:field="*{errorMessage}" th:text = "*{errorMessage}"/>
+    <input type="submit" value="Get back"/>
+</form>
+</body>
+</html>
